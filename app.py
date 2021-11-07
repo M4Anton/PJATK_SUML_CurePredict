@@ -37,7 +37,7 @@ def main():
 	s_confidence = model.predict_proba(data)
 
 	with prediction:
-		st.header("Czy osoba wyzdrowieje w ciągu tygodnia? {0}".format("Tak" if cure[0] == 1 else "Nie"))
+		st.header("Czy osoba wyzdrowieje w ciągu tygodnia? {0}".format("Nie" if cure[0] == 1 else "Tak"))
 		st.subheader("Pewność predykcji {0:.2f} %".format(s_confidence[0][cure][0] * 100))
 
 if __name__ == "__main__":
